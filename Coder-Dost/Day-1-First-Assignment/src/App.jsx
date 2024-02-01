@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const resume = {
+    experience : [ { year:2012, company:'xyz', role:'something' }],
+    education:[ ],
+    skills: ['react js', 'node js']
+  }
+  const { experience, education, skills } = resume;
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="Header"></div>
+      <div className="Main-Container">
+        <div className="Left"></div>
+        <div className="Middle">
+          <h1>Resume</h1>
+          <h2>Emily</h2>
+          <hr />
+          <br />
+          <p>Interests</p>
+          <ul>
+            <li>Drawing</li>
+            <li>Photography</li>
+            <li>Design</li>
+            <li>Programming</li>
+            <li>Computer Science</li>
+          </ul>
+          <p>Skills</p>
+          <ul>
+            <li>Web Design with HTML & CSS</li>
+          </ul>
+          <p>Education</p>
+          <ul>
+            <li>Wilton High School</li>
+            <li>Silvermine School of Arts</li>
+            <li>Codeacademy</li>
+          </ul>
+          <p>Experience</p>
+          <ul>
+            <li>Student Technology Intern for Wilton School District</li>
+            <li>Babysitter</li>
+          </ul>
+          <p>Extracurriculars</p>
+          <ul>
+            <li>Recycling Club</li>
+            <li>Gardening Club</li>
+            <li>Book Club</li>
+          </ul>
+        </div>
+        <div className="Right"></div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="Footer"></div>
     </>
-  )
+  );
 }
 
 export default App
