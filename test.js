@@ -17,3 +17,11 @@ console.log(first); // [2, 3]
 hoistedVariable = 3;
 console.log(hoistedVariable); // outputs 3 even when the variable is declared after it is initialized
 var hoistedVariable;
+
+function higherOrder(fn) {
+  fn();
+}
+
+higherOrder(function () {
+  console.log("Hello world");
+});  
