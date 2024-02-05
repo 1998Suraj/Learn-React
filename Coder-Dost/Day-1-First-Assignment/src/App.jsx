@@ -1,12 +1,6 @@
 import './App.css'
 
 function App() {
-  const resume = {
-    experience : [ { year:2012, company:'xyz', role:'something' }],
-    education:[ ],
-    skills: ['react js', 'node js']
-  }
-  const { experience, education, skills } = resume;
   return (
     <>
       <div className="Header"></div>
