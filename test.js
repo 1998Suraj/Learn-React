@@ -1,27 +1,13 @@
-// Array and object Destructuring
+const array = [1, 5, 2, 3, 2, 7, 8, 1, 3];
 
-//Basic variable assignment
-const foo = ["one", "two", "three"];
+let arr2 = [array[0]];
 
-const [red, yellow, green] = foo;
-console.log(red); // "one"
-console.log(yellow); // "two"
-console.log(green); // "three"
-
-const { a, ...rest } = { a: 1, b: 2, c: 3 };
-console.log(rest); // { b: 2, c: 3 }
-
-const [first, ...rest1] = [1, 2, 3];
-console.log(first); // [2, 3]
-
-hoistedVariable = 3;
-console.log(hoistedVariable); // outputs 3 even when the variable is declared after it is initialized
-var hoistedVariable;
-
-function higherOrder(fn) {
-  fn();
+for (let i = 1; i < array.length; i++) {
+  for (let j = 0; j < arr2.length; j++) {
+    if (arr2[j] !== array[i]) {
+      arr2.push(arr2[j]);
+    }
+  }
 }
 
-higherOrder(function () {
-  console.log("Hello world");
-});  
+console.log(arr2);
